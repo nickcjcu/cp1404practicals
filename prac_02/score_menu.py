@@ -1,27 +1,3 @@
-def get_valid_score():
-    score = -1
-    while score < 0 or score > 100:
-        score = int(input("Enter a valid score (0-100): "))
-    return score
-
-
-def print_result(score):
-    if score >= 90:
-        print("Result: A")
-    elif score >= 80:
-        print("Result: B")
-    elif score >= 70:
-        print("Result: C")
-    elif score >= 60:
-        print("Result: D")
-    else:
-        print("Result: F")
-
-
-def show_stars(score):
-    print("Stars: " + "*" * score)
-
-
 def main():
     score = get_valid_score()
     choice = ""
@@ -45,6 +21,29 @@ def main():
             print("Farewell!")
         else:
             print("Invalid input. Please try again.")
+
+def get_valid_score():
+    score = -1
+    while score < 0 or score > 100:
+        score = int(input("Enter a valid score (0-100): "))
+    return score
+
+
+def print_result(score):
+    if score >= 90:
+        print("Result: A")
+    elif score >= 80:
+        print("Result: B")
+    elif score >= 70:
+        print("Result: C")
+    elif score >= 60:
+        print("Result: D")
+    else:
+        print("Result: F")
+
+
+def show_stars(score):
+    print("Stars: " + "*" * score)
 
 
 main()
