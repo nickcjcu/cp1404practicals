@@ -12,15 +12,15 @@ def main():
 
 
 def load_data():
-    data = []  # Create an empty list to store the data
+    data = []
     input_file = open(FILENAME)
     for line in input_file:
-        line = line.strip()  # Remove the \n at the end of the line
-        parts = line.split(',')  # Separate the data into its parts
-        parts[2] = int(parts[2])  # Convert number of students to an integer
-        data.append(parts)  # Append each line's data (as a list) to the main list
+        line = line.strip()
+        parts = line.split(',')
+        parts[2] = int(parts[2])
+        data.append(parts)
     input_file.close()
-    return data  # Return the list of lists
+    return data
 
 
 def display_subject_details(data):
